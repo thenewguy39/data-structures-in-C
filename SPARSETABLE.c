@@ -29,7 +29,7 @@ void add(int i, int j, int val){
 	}
 }
 
-void SparseTable(int r, int c){
+void SparseMatrix(int r, int c){
 	int i, j;
 	for(i = 0; i < r; i++){
 		for(j = 0; j < c; j++){
@@ -46,7 +46,7 @@ void SparseTable(int r, int c){
 }
 
 void print2(){
-	printf("Sparse Table stored using array\n");
+	printf("Sparse Matrix stored using array\n");
 	int i;
 	for(i = 0; i < curr; i++){
 		printf("(Row,Col) = (%d,%d) ", arr[i][0], arr[i][1]);
@@ -55,7 +55,7 @@ void print2(){
 }
 
 void print1(){
-	printf("Sparse Table stored using linked list\n");
+	printf("Sparse Matrix stored using linked list\n");
 	struct node* temp = head;
 	while(temp != NULL){
 		printf("(Row,Col) = (%d,%d) ", temp->r, temp->c);
@@ -71,7 +71,7 @@ void create(int r, int c){
 		for(j = 0; j < c; j++)
 			scanf("%d", &mat[i][j]);
 	}
-	SparseTable(r, c);
+	SparseMatrix(r, c);
 	print1();
 	print2();
 }
